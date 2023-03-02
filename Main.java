@@ -11,6 +11,8 @@ class Main {
         {
             System.out.println("Enter No.1 for Fibonacci Series");
             System.out.println("Enter No.2 for Perfect Number");
+            System.out.println("Enter No.3 for Check Prime number");
+
             option = sc.nextInt();
             switch (option) {
                 case 1:
@@ -19,6 +21,10 @@ class Main {
                     break;
                 case 2:
                     PerfectNumber();
+                    a = false;
+                    break;
+                case 3:
+                    PrimeNumber();
                     a = false;
                     break;
                 default:
@@ -59,6 +65,25 @@ class Main {
             System.out.println("Not Perfect:" + Num);
         }
     }
+    static void PrimeNumber()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number to check if it is truly prime number or not: ");
+        int number, sum = 0;
+        number = sc.nextInt();
+        for (int i = 1; i <= number; i++)
+        {
+            if (number % i == 0)
+            {
+                sum++;
+            }
+        }
+        if (sum == 2)
+            System.out.println("This Number is Prime Number:");
+        else
+            System.out.println("This Number is NOT Prime Number:");
+    }
+
 }
 
 
