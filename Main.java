@@ -90,7 +90,7 @@ class Main {
     }
     static void reverseNumber()
     {
-        System.out.println("Enter Any Number");
+        System.out.println("Enter The Number That You Want To Reverse");
         Scanner sc = new Scanner(System.in);
         int result;
         int number = sc.nextInt();
