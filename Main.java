@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Random;
 import java.util.Scanner;
 
 class Main {
@@ -13,6 +14,8 @@ class Main {
             System.out.println("Enter No.2 for Perfect Number");
             System.out.println("Enter No.3 for Check Prime number");
             System.out.println("Enter No.4 for Reverse number");
+            System.out.println("Enter No.5 for Coupon Number");
+
 
             option = sc.nextInt();
             switch (option) {
@@ -30,6 +33,10 @@ class Main {
                     break;
                 case 4:
                     reverseNumber();
+                    a= false;
+                    break;
+                case 5:
+                    couponNumbers();
                     a= false;
                     break;
                 default:
@@ -100,6 +107,24 @@ class Main {
             System.out.print(result);
             number = number / 10;
         }
+    }
+    static void couponNumbers()
+    {
+        Random rnd =new Random(1111);
+        int c= rnd.nextInt(9999);
+
+        char a[]={'a', 'b', 'c', 'd', 'e', 'f', 'g',
+                 'h', 'i', 'j', 'k', 'l', 'm', 'n',
+                 'o', 'p', 'q', 'r', 's', 't', 'u',
+                 'v', 'w', 'x', 'y', 'z'};
+        String res="";
+        Random rnd2=new Random();
+        for(int i=0;i<5;i++)
+        {
+            int d=rnd2.nextInt(26);
+            res=res+ a[d];
+        }
+        System.out.println("Generate Coupon Code: "+ res+c);
     }
 
 }
