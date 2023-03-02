@@ -12,6 +12,7 @@ class Main {
             System.out.println("Enter No.1 for Fibonacci Series");
             System.out.println("Enter No.2 for Perfect Number");
             System.out.println("Enter No.3 for Check Prime number");
+            System.out.println("Enter No.4 for Reverse number");
 
             option = sc.nextInt();
             switch (option) {
@@ -26,6 +27,10 @@ class Main {
                 case 3:
                     PrimeNumber();
                     a = false;
+                    break;
+                case 4:
+                    reverseNumber();
+                    a= false;
                     break;
                 default:
                     System.out.println(" Please Enter Right No ");
@@ -82,6 +87,19 @@ class Main {
             System.out.println("This Number is Prime Number:");
         else
             System.out.println("This Number is NOT Prime Number:");
+    }
+    static void reverseNumber()
+    {
+        System.out.println("Enter Any Number");
+        Scanner sc = new Scanner(System.in);
+        int result;
+        int number = sc.nextInt();
+        while (number > 0)
+        {
+            result = number % 10;
+            System.out.print(result);
+            number = number / 10;
+        }
     }
 
 }
